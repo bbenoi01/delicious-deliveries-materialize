@@ -1,0 +1,33 @@
+{
+  "name": "Orders",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "delivery_address": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "array",
+      "required": "true"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customers": {
+      "type": "hasOne",
+      "model": "Customer",
+      "foreignKey": ""
+    },
+    "restaurants": {
+      "type": "hasOne",
+      "model": "Restaurant",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

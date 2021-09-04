@@ -1,0 +1,35 @@
+{
+  "name": "Menu-Items",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "menus": {
+      "type": "hasOne",
+      "model": "Menu",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
